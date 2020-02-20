@@ -7,7 +7,7 @@ import com.flipkart.flows.SearchProductScenarioOneFlow;
 
 public class SearchProductScenarioOneTest {
 	
-	    public static void main(String[] args) {
+	    public static void main(String[] args) throws InterruptedException {
 	   
 			System.setProperty("webdriver.chrome.driver","C://Users//sunny//Downloads//chromedriver.exe");
 			
