@@ -31,13 +31,13 @@ public class SearchPage {
 
 	public void enterProduct() {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(SEARCH_BAR)).sendKeys("Sennheiser HD 820 Wired Headset");	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SEARCH_BAR)).sendKeys("DW00100148 Classic Black Cornwall Analog Watch - For Men");	
 		driver.findElement(By.xpath("//button[@class='vh79eN']")).click();
 	}
 
 	public void clickProduct() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//a[contains(text(),'Sennheiser HD 820 Wired Headset')]")).click();	
+		driver.findElement(By.xpath("//a[contains(text(),'DW00100149 Classic Black Cornwall Analog Watch')]")).click();	
 		
 	}
 
@@ -51,7 +51,7 @@ public class SearchPage {
 		//driver.switchTo().window(parentWindow);
 		WebElement element = driver.findElement(By.xpath("//div[@class='_1vC4OE _3qQ9m1']"));	
 		priceFlipkart = element.getText();
-		System.out.println("Price of the Headphone is "+priceFlipkart);
+		System.out.println("Price of the Watch is "+priceFlipkart);
 
 	}
 
@@ -71,20 +71,20 @@ public class SearchPage {
 		
 		WebElement element = driver.findElement(By.xpath("//span[@class='pMSy0p XU9vZa']"));	
 		priceFlipkartAdd = element.getText();
-		System.out.println("Price of the Headphone after adition is "+priceFlipkartAdd);
+		System.out.println("Price of the Watch after adition is "+priceFlipkartAdd);
 		
 	}
 
 	public void enterProductInAmaxon() {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='twotabsearchtextbox']"))).sendKeys("Sennheiser HD 820 Wired Headset");	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='twotabsearchtextbox']"))).sendKeys("DW00100148 Classic Black Cornwall Analog Watch - For Men");	
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		
 	}
 
 	public void clickProductInAmazon() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//span[contains(text(),'Sennheiser Over Ear HD 820')]")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'Daniel Wellington Classic Analog Black Dial')]")).click();
 	}
 
 	public void printPriceInAmazaon() {
@@ -94,9 +94,9 @@ public class SearchPage {
 		    driver.switchTo().window(winHandle);
 		}
 		//driver.switchTo().window(parentWindow);
-		WebElement element = driver.findElement(By.xpath("//span[@id='priceblock_dealprice']"));	
+		WebElement element = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-price priceBlockBuyingPriceString']"));	
 		priceAmazon = element.getText();
-		System.out.println("Price of the Headphone is "+priceAmazon);
+		System.out.println("Price of the Watch is "+priceAmazon);
 	}
 
 	public void addToCartInAmazon() throws InterruptedException {
@@ -115,7 +115,7 @@ public class SearchPage {
 		
 		WebElement element = driver.findElement(By.xpath("//span[@class='a-size-medium a-color-price sc-price sc-white-space-nowrap sc-price-sign']"));	
 		priceAmazon = element.getText();
-		System.out.println("Price of the Headphone is "+priceAmazon);
+		System.out.println("Price of the Watch is "+priceAmazon);
 	}
 
 	public void printCheaperPrice() {

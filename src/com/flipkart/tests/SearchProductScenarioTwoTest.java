@@ -25,7 +25,7 @@ public class SearchProductScenarioTwoTest {
 		
 		searchProductScenarioOneFlow.searchFlowScenarioTwo();
 
-        //driver.close();
+        driver.close();
        
     }
 }
